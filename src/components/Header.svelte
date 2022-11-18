@@ -1,10 +1,8 @@
 <script>
-    let scrollPos = 0;
-
-    document.addEventListener('scroll', () => {
-        scrollPos = document.documentElement.scrollTop || document.body.scrollTop;
-    });
+    let scrollPos;
 </script>
+
+<svelte:window bind:scrollY={scrollPos}/>
 
 <header class="{ scrollPos > 50 ? 'sticky' : '' }">
     <div class="container max-w-screen-lg flex justify-between p-2 pb-0">
