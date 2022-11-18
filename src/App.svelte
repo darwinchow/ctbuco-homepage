@@ -2,13 +2,13 @@
   import Header from './components/Header.svelte';
 </script>
 
-<main class="max-w-7xl">
+<main class="w-screen">
   <Header />
-  <div class="container"></div>
+  <div class="max-w-7xl container"></div>
 </main>
 
 <style>
   main > .container {
-    margin-top: 7rem;
+    margin: 7rem auto 0;
   }
 </style>
