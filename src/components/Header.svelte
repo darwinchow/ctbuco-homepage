@@ -18,11 +18,12 @@
             <p class="mb-4">重庆工商大学CO科创团队</p>
         </div>
 
-        <div class="social-buttons">
+        <div class="social-buttons flex flex-col items-end">
             <p class="text-xl font-bold">关注我们</p>
             <div class="flex justify-end">
-                <a class="mx-1" href="https://space.bilibili.com/1929514785" target="_blank" rel="noreferrer"><img src="https://bilibili.com/favicon.ico" alt="bilibili-logo"></a>
-                <a class="mx-1" href="http://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI0ODcxNTYxNA==" target="_blank" rel="noreferrer"><img src="https://mp.weixin.qq.com/favicon.ico" alt="wechat-logo"></a>
+                <a class="social-logo" href="https://space.bilibili.com/1929514785" target="_blank" rel="noreferrer"><img src="https://bilibili.com/favicon.ico" alt="bilibili-logo"></a>
+                <a class="social-logo" href="http://mp.weixin.qq.com/mp/profile_ext?action=home&__biz=MzI0ODcxNTYxNA==" target="_blank" rel="noreferrer"><img src="https://mp.weixin.qq.com/favicon.ico" alt="wechat-logo"></a>
+                <a class="social-logo" href="https://qm.qq.com/cgi-bin/qm/qr?k=5DVOVkXVaRk2n1I30-QAxHCq9kKXVSb-&jump_from=webapi&authKey=utg0koZNImL1bnOyQsRmL+/4+KtCCGCOlddUuYqYkkr2yy4Zff25z/fNStler7Qg" target="_blank" rel="noreferrer"><img src="https://connect.qq.com/favicon.ico" alt="qq-logo"></a>
             </div>
         </div>
     </div>
@@ -53,5 +54,14 @@ header.sticky > .container {
 }
 header.sticky .nav-brand p {
   display: none;
+}
+
+/* Social meida logo */
+.social-logo {
+    margin-left: 8px;
+}
+.social-logo > img {
+    width: 32px;
+    height: 32px;
 }
 </style>
