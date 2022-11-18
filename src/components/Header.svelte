@@ -1,10 +1,12 @@
 <script>
+    import { slide } from 'svelte/transition';
+
     let scrollPos;
 </script>
 
 <svelte:window bind:scrollY={scrollPos}/>
 
-<header class="{ scrollPos > 50 ? 'sticky' : '' }">
+<header>
     <div class="container max-w-screen-lg flex justify-between p-2 pb-0">
         <div class="nav-brand">
             <a href="https://nostalgic-css.github.io/NES.css/">
@@ -13,7 +15,9 @@
                     CO
                 </h1>
             </a>
-            <p class="mb-2">重庆工商大学CO科创团队</p>
+            {#if scrollPos < 50}
+                <p transition:slide class="mb-2">重庆工商大学CO科创团队</p>
+            {/if}
         </div>
 
         <div class="social-buttons flex flex-col items-end">
@@ -42,15 +46,6 @@ header {
 header > .container {
   margin: 0 auto;
   padding-top: 1rem;
-  transition: all 0.2s ease;
-}
-
-/* Header-sticky */
-header.sticky > .container {
-  font-size: 0.8rem;
-}
-header.sticky .nav-brand p {
-  display: none;
 }
 
 /* Social meida logo */
