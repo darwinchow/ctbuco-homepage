@@ -7,7 +7,7 @@
 </script>
 
 <header class="{ scrollPos > 50 ? 'sticky' : '' }">
-    <div class="container max-w-screen-lg flex justify-between">
+    <div class="container max-w-screen-lg flex justify-between p-2 pb-0">
         <div class="nav-brand">
             <a href="https://nostalgic-css.github.io/NES.css/">
                 <h1 class="text-4xl font-bold flex flex-row items-center">
@@ -15,7 +15,7 @@
                     CO
                 </h1>
             </a>
-            <p class="mb-4">重庆工商大学CO科创团队</p>
+            <p class="mb-2">重庆工商大学CO科创团队</p>
         </div>
 
         <div class="social-buttons flex flex-col items-end">
@@ -50,7 +50,6 @@ header > .container {
 /* Header-sticky */
 header.sticky > .container {
   font-size: 0.8rem;
-  padding: 0;
 }
 header.sticky .nav-brand p {
   display: none;
