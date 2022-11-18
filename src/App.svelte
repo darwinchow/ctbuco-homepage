@@ -1,10 +1,14 @@
 <script>
+  import Header from './components/Header.svelte';
 </script>
 
-<main>
-  <h1>CO</h1>
+<main class="max-w-7xl">
+  <Header />
+  <div class="container"></div>
 </main>
 
 <style>
-  
+  main > .container {
+    margin-top: 7rem;
+  }
 </style>

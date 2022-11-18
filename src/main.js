@@ -1,10 +1,26 @@
 import "nes.css/css/nes.min.css";
 
-import './app.css'
-import App from './App.svelte'
+import './app.css';
+import App from './App.svelte';
 
 const app = new App({
   target: document.getElementById('app')
-})
+});
 
-export default app
+// banner
+// generated from http://patorjk.com/software/taag/#p=display&f=Isometric2&t=CO
+console.log(`
+      ___           ___     
+     /\\__\\         /\\  \\    
+    /:/  /        /::\\  \\   
+   /:/  /        /:/\\:\\  \\  
+  /:/  /  ___   /:/  \\:\\  \\ 
+ /:/__/  /\\__\\ /:/__/ \\:\\__\\
+ \\:\\  \\ /:/  / \\:\\  \\ /:/  /
+  \\:\\  /:/  /   \\:\\  /:/  / 
+   \\:\\/:/  /     \\:\\/:/  /  
+    \\::/  /       \\::/  /   
+     \\/__/         \\/__/    
+`);
+
+export default app;
