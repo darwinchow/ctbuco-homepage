@@ -2,7 +2,7 @@
   import Header from './components/Header.svelte';
 </script>
 
-<main class="w-screen">
+<main class="w-full">
   <Header />
   <div class="max-w-7xl container"></div>
 </main>
