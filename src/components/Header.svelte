@@ -9,7 +9,7 @@
 <header>
     <div class="container max-w-screen-lg flex justify-between p-2 pb-0">
         <div class="nav-brand">
-            <a href="https://nostalgic-css.github.io/NES.css/">
+            <a href="/">
                 <h1 class="text-4xl font-bold flex flex-row items-center">
                     <img src="/co.png" alt="logo" class="inline h-12 w-12 mr-2">
                     CO
