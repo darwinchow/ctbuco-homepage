@@ -7,7 +7,7 @@
 <svelte:window bind:scrollY={scrollPos}/>
 
 <header>
-    <div class="container max-w-screen-lg flex justify-between p-2 pb-0">
+    <div class="container flex justify-between p-2 pb-0">
         <div class="nav-brand">
             <a href="/">
                 <h1 class="text-4xl font-bold flex flex-row items-center">

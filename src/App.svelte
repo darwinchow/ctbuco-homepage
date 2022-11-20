@@ -4,7 +4,7 @@
 
 <main class="w-full">
   <Header />
-  <div class="max-w-7xl container"></div>
+  <div class="container"></div>
 </main>
 
 <style>
