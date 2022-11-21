@@ -4,9 +4,13 @@
 
 @font-face {
   font-family: Zpix;
-  src: url("assets/font/Zpix.woff2");
+  src: url("/Zpix.woff2");
 }
 
 html, body, pre, code, kbd, samp {
   font-family: Zpix;
+}
+
+body {
+  scroll-behavior: smooth;
 }

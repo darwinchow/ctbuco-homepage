@@ -9,6 +9,6 @@
 
 <style>
   main > .container {
-    margin: 7rem auto 0;
+    margin: 0 auto;
   }
 </style>
