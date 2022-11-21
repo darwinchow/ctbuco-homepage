@@ -6,7 +6,7 @@
  * @param   {Function}      easing  缓动函数，默认为线性函数
  * @returns {Number}
  */
-const interp = function interpolation(scrollY, active, range, easing=(x => x)) {
+export const interp = function interpolation(scrollY, active, range, easing=(x => x)) {
     const begin = active[0],
           stop  = active[1],
           start = range[0],
@@ -20,6 +20,8 @@ const interp = function interpolation(scrollY, active, range, easing=(x => x)) {
         return end;
     }
     return start + rang * easing(scrollY / wind);
-}
+};
 
-export default interp;
+export default {
+    interp
+};

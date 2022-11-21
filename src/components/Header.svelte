@@ -1,5 +1,5 @@
 <script>
-    import interp from '../utils';
+    import { interp } from '../utils';
     let scrollPos, width, height;
 
     let coLogo;
