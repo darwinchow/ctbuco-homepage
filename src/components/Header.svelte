@@ -9,7 +9,7 @@
 
     // 下面这些变量不能直接写成值，因为很多标签都是在改变的，这也就导致 `offsetLeft` 一类变量会一直更新，
     // 但是由于没有明显的出现赋值语句，svelte 不会更新，所以需要在 `scrollY` 更改的时候通过后面的 style 调用函数来获取
-    const coLogoW = () => interp(scrollPos, [0, height], [144, 48], easeOutCirc),
+    const coLogoW = () => interp(scrollPos, [0, height - 96], [144, 48], easeOutCirc),
           coLogoH = () => coLogoW(),
           coLogoL = () => coLogo ? coLogo.offsetLeft : 0,
           coLogoT = () => coLogo ? coLogo.offsetTop : 0,
@@ -24,19 +24,19 @@
         background-attachment:fixed;
         background-position:center;
         background-size: cover;
-        filter: opacity(${interp(scrollPos, [0, height], [.6, 0], (x => x === 0 ? 0 : Math.pow(2, 10 * x - 10)))}) blur(2px);
+        filter: opacity(${interp(scrollPos, [0, height - 96], [.6, 0], (x => x === 0 ? 0 : Math.pow(2, 10 * x - 10)))}) blur(2px);
         z-index: -1;`;
     $: coLogoStyle = `
         width: ${coLogoW()}px;
         height: ${coLogoH()}px;
         transform: 
-            translateX(${interp(scrollPos, [0, height], [(width / 2) - coLogoL() - (coLogoW() / 2), 0], easeOutCirc)}px)
-            translateY(${interp(scrollPos, [0, height], [(height / 2) - coLogoT() - (coLogoH() / 2), 0], easeOutCirc)}px);`;
+            translateX(${interp(scrollPos, [0, height - 96], [(width / 2) - coLogoL() - (coLogoW() / 2), 0], easeOutCirc)}px)
+            translateY(${interp(scrollPos, [0, height - 96], [(height / 2) - coLogoT() - (coLogoH() / 2), 0], easeOutCirc)}px);`;
     $: coTextStyle = `
-        font-size: ${interp(scrollPos, [0, height], [80, 40])}px;
+        font-size: ${interp(scrollPos, [0, height - 96], [80, 40])}px;
         transform:
-            translateX(${interp(scrollPos, [0, height], [width / 2 - coTextL() - 48, 0], easeOutCirc)}px)
-            translateY(${interp(scrollPos, [0, height], [height / 2 + 16, 0], easeOutCirc)}px);`;
+            translateX(${interp(scrollPos, [0, height - 96], [width / 2 - coTextL() - 48, 0], easeOutCirc)}px)
+            translateY(${interp(scrollPos, [0, height - 96], [height / 2 + 16, 0], easeOutCirc)}px);`;
 </script>
 
 <svelte:window bind:scrollY={scrollPos} bind:innerWidth={width} bind:innerHeight={height}/>
