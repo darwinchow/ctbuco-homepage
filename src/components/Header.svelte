@@ -9,11 +9,11 @@
 
     // 下面这些变量不能直接写成值，因为很多标签都是在改变的，这也就导致 `offsetLeft` 一类变量会一直更新，
     // 但是由于没有明显的出现赋值语句，svelte 不会更新，所以需要在 `scrollY` 更改的时候通过后面的 style 调用函数来获取
-    let coLogoW = () => interp(scrollPos, [0, height], [144, 48], easeOutCirc);
-    let coLogoH = () => coLogoW();
-    let coLogoL = () => coLogo ? coLogo.offsetLeft : 0;
-    let coLogoT = () => coLogo ? coLogo.offsetTop : 0;
-    let coTextL = () => coLogoL() + coLogoW(); // 由于第一次计算的时候 logo 的宽度还没有改变，所以用来计算的值不是预期的 offsetLeft，这里通过 logo 的数据推算出 text 的 offsetLeft
+    const coLogoW = () => interp(scrollPos, [0, height], [144, 48], easeOutCirc),
+          coLogoH = () => coLogoW(),
+          coLogoL = () => coLogo ? coLogo.offsetLeft : 0,
+          coLogoT = () => coLogo ? coLogo.offsetTop : 0,
+          coTextL = () => coLogoL() + coLogoW(); // 由于第一次计算的时候 logo 的宽度还没有改变，所以用来计算的值不是预期的 offsetLeft，这里通过 logo 的数据推算出 text 的 offsetLeft
 
     $: backgroundStyle = `
         position: absolute;
