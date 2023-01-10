@@ -22,6 +22,16 @@ export const interp = function interpolation(scrollY, active, range, easing=(x =
     return start + rang * easing(scrollY / wind);
 };
 
+/**
+ * 计算元素距离其父元素顶部的距离
+ * @param   {HTMLElement} element 
+ * @returns {Number}
+ */
+export const parentTop = function distanceToParent(element) {
+    return element ? element.offsetTop - element.parentElement.offsetTop : 0;
+};
+
 export default {
-    interp
+    interp,
+    parentTop
 };

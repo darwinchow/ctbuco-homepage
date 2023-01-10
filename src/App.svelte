@@ -1,14 +1,17 @@
 <script>
   import Header from './components/Header.svelte';
+  import Intro from './components/Intro.svelte';
 </script>
 
 <main class="w-full">
   <Header />
-  <div class="container"></div>
+  <div class="content">
+    <Intro />
+  </div>
 </main>
 
 <style>
-  main > .container {
-    margin: 100vh auto 0;
+  main > .content {
+    margin-top: 100vh;
   }
 </style>

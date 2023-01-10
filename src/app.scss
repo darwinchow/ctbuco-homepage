@@ -13,4 +13,12 @@ html, body, pre, code, kbd, samp {
 
 body {
   scroll-behavior: smooth;
+  --body-height: calc(100vh - 96px);
+  // overflow-x: hidden;
+}
+
+.section {
+  height: var(--body-height);
+  position: sticky;
+  top: 96px;
 }
