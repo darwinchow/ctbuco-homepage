@@ -73,6 +73,7 @@ header {
   right: 0;
   z-index: 9;
   border-bottom: 4px solid #D3D3D3;
+  /* 背景颗粒效果 */
   background: radial-gradient(transparent, rgba(255, 255, 255, 1) 2px);
   background-size: 4px 4px;
   backdrop-filter: blur(10px);
