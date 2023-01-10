@@ -73,7 +73,9 @@ header {
   right: 0;
   z-index: 9;
   border-bottom: 4px solid #D3D3D3;
-  background-color: white;
+  background: radial-gradient(transparent, rgba(255, 255, 255, 1) 2px);
+  background-size: 4px 4px;
+  backdrop-filter: blur(10px);
 }
 
 header > .container {
