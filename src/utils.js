@@ -19,7 +19,7 @@ export const interp = function interpolation(scrollY, active, range, easing=(x =
     if(scrollY >= stop) {
         return end;
     }
-    return start + rang * easing(scrollY / wind);
+    return start + rang * easing((scrollY - begin) / wind);
 };
 
 /**
