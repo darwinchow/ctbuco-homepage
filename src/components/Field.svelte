@@ -32,9 +32,6 @@
         const scrollLocal = scroll % bodyHeight;
         return -((scrollLocal > bodyHeight - range ? interp((scrollLocal - bodyHeight + range) / range, [0, 1], [0, 1]) * bodyHeight : 0) + (page - 4) * bodyHeight);
     };
-    const left = (scroll) => {
-
-    }
 </script>
 
 <svelte:window bind:scrollY={scrollPos} bind:innerHeight={height} bind:innerWidth={width}/>
