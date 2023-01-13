@@ -2,6 +2,7 @@
   import Header from './components/Header.svelte';
   import Intro from './components/Intro.svelte';
   import Field from './components/Field.svelte';
+  import Award from './components/Award.svelte';
 </script>
 
 <main class="w-full">
@@ -9,6 +10,7 @@
   <div class="content">
     <Intro />
     <Field />
+    <Award />
   </div>
 </main>
 
