@@ -3,6 +3,7 @@
   import Intro from './components/Intro.svelte';
   import Field from './components/Field.svelte';
   import Award from './components/Award.svelte';
+  import Final from './components/Final.svelte';
 </script>
 
 <main class="w-full">
@@ -11,6 +12,7 @@
     <Intro />
     <Field />
     <Award />
+    <Final />
   </div>
 </main>
 
