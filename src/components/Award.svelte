@@ -18,14 +18,14 @@ div.scroll-container(style="height: calc(2 * var(--body-height));")
                         .marquee__group(aria-hidden=aria)
                             while n <= 15
                                 svg
-                                    image(height="100%",width="100%",href="/img/awards/1/"+(n++)+".png")
+                                    image(height="100%",width="100%",href="/img/awards/1/"+(n++)+".jpg")
                 .marquee.marquee--reverse
                     each aria in ['false', 'true']
                         - var n = 1;
                         .marquee__group(aria-hidden=aria)
                             while n <= 12
                                 svg
-                                    image(height="100%",width="100%",href="/img/awards/2/"+(n++)+".png")
+                                    image(height="100%",width="100%",href="/img/awards/2/"+(n++)+".jpg")
         p.title 团队荣誉
 
 

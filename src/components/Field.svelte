@@ -44,7 +44,7 @@ div.scroll-container(style="height: calc(8 * var(--body-height));--left: {interp
             each field, i in ['web', 'app', '嵌入式', 'ai', 'ctf']
                 p.word(style="opacity: {scrollPos ? fieldOpacity(" + i + ") : 0};filter: blur({(1 - (scrollPos ? fieldOpacity(" + i + ") : 0)) * 20}px);")= field.toUpperCase()
         div.field-contents(style="margin-top: {fieldContentTop(scrollPos)}px;--scale-rate: {scaleRate(scrollPos)};")
-            each f in [['web',"['covid.png','dms.png']"],['app',"['fireproof.png','meeting.png']"],['嵌入式',"['retirement-home.png','agriculture.png']"],['ai',"['auto-aim.png','driver.png']"],['ctf',"['lvmeng-award.jpg','lvmeng-coattack.jpg']"]]
+            each f in [['web',"['covid.jpg','dms.jpg']"],['app',"['fireproof.jpg','meeting.jpg']"],['嵌入式',"['retirement-home.jpg','agriculture.jpg']"],['ai',"['auto-aim.jpg','driver.jpg']"],['ctf',"['lvmeng-award.jpg','lvmeng-coattack.jpg']"]]
                 FieldContent(field=f[0],imgs="{" + f[1] + "}")
         div.light-shadow
 </template>
