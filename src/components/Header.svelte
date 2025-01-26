@@ -48,7 +48,7 @@
             <a href="/">
                 <h1 class="text-4xl font-bold flex flex-row items-center">
                     <img bind:this={coLogo} src="/img/co.png" alt="logo" class="inline mr-2" style={coLogoStyle}>
-                    <span bind:this={coText} style={coTextStyle}>CO</span>
+                    <span bind:this={coText} style={coTextStyle}>CTBU CO</span>
                 </h1>
             </a>
         </div>
