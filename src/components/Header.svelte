@@ -54,6 +54,10 @@
         </div>
 
         <div class="social-buttons flex flex-col items-end" style="min-width: 120px;margin: auto 0;">
+            <p class="font-bold" style="font-size: 24px;" href="https://blog.ctbuco.com" target="_blank">博客</p>
+        </div>
+
+        <div class="social-buttons flex flex-col items-end" style="min-width: 120px;margin: auto 0;">
             <p class="font-bold" style="font-size: 24px;">关注我们</p>
             <div class="flex justify-end" style="font-size: 24px;">
                 <a class="social-logo" href="https://space.bilibili.com/1929514785" target="_blank" rel="noreferrer"><img src="/img/bilibili.svg" alt="bilibili-logo"></a>
