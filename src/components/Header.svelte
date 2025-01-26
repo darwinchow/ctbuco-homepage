@@ -54,7 +54,7 @@
         </div>
 
         <div class="social-buttons flex flex-col items-end" style="min-width: 120px;margin: auto 0;">
-            <p class="font-bold" style="font-size: 24px;" href="https://blog.ctbuco.com" target="_blank">博客</p>
+            <a class="font-bold" style="font-size: 24px;" href="https://blog.ctbuco.com">博客</a>
         </div>
 
         <div class="social-buttons flex flex-col items-end" style="min-width: 120px;margin: auto 0;">
