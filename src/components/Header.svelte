@@ -13,6 +13,7 @@
           coLogoH = () => coLogoW(),
           coLogoL = () => coLogo ? coLogo.offsetLeft : 0,
           coLogoT = () => coLogo ? coLogo.offsetTop : 0,
+          coTextContent = 'CTBU CO',
           coTextL = () => coLogoL() + coLogoW(); // 由于第一次计算的时候 logo 的宽度还没有改变，所以用来计算的值不是预期的 offsetLeft，这里通过 logo 的数据推算出 text 的 offsetLeft
 
     $: backgroundStyle = `
@@ -35,7 +36,7 @@
     $: coTextStyle = `
         font-size: ${interp(scrollPos, [0, height - 96], [80, 40])}px;
         transform:
-            translateX(${interp(scrollPos, [0, height - 96], [width / 2 - coTextL() - 48, 0], easeOutCirc)}px)
+            translateX(${interp(scrollPos, [0, height - 96], [width / 2 - coTextL() - (coTextContent.length * 48 / 2), 0], easeOutCirc)}px)
             translateY(${interp(scrollPos, [0, height - 96], [height / 2 + 16, 0], easeOutCirc)}px);`;
 </script>
 
@@ -45,12 +46,10 @@
     <div style={backgroundStyle}></div>
     <div class="container flex justify-between p-2 pb-0">
         <div class="nav-brand">
-            <a href="/">
-                <h1 class="text-4xl font-bold flex flex-row items-center">
-                    <img bind:this={coLogo} src="/img/co.png" alt="logo" class="inline mr-2" style={coLogoStyle}>
-                    <span bind:this={coText} style={coTextStyle}>CTBU CO</span>
-                </h1>
-            </a>
+            <h1 class="text-4xl font-bold flex flex-row items-center">
+                <img bind:this={coLogo} src="/img/co.png" alt="logo" class="inline mr-2" style={coLogoStyle}>
+                <span bind:this={coText} style={coTextStyle}>{coTextContent}</span>
+            </h1>
         </div>
 
         <div class="social-buttons flex flex-col items-end" style="min-width: 120px;margin: auto 0;">
