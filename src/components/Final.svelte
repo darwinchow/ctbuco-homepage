@@ -10,7 +10,11 @@ div.scroll-container(style="height: calc(2 * var(--body-height));")
         .content
             p CO
             p 始于所好，乐在与共
-
+        .sponsor
+            p 由
+            a(href="https://yxvm.com" target="_blank" rel="noreferrer")
+                img(src="/img/yxvm.png" alt="YxVM")
+            p 提供计算服务，助您快速启动项目
 </template>
 
 <style lang="scss">
@@ -44,6 +48,24 @@ div.scroll-container(style="height: calc(2 * var(--body-height));")
         color: #fff;
         font-size: 48px;
         font-weight: bolder;
+    }
+}
+.sponsor {
+    position: absolute;
+    bottom: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 16px;
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            height: 36px;
+        }
     }
 }
 </style>
